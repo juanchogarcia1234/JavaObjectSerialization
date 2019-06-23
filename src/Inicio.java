@@ -11,11 +11,11 @@ public class Inicio {
 		GameCharacter player1 = new GameCharacter();
 		GameCharacter player2 = new GameCharacter();
 		
-		player1.power = 5;
-		player1.type = "Elfo";
+		player1.setPower(5);
+		player1.setType("Elfo");
 		
-		player2.power = 10;
-		player2.type = "Unicornio";
+		player2.setPower(10);
+		player2.setType("Unicornio");
 		
 		try {
 			FileOutputStream fos = new FileOutputStream("characters.ser");
@@ -46,7 +46,7 @@ public class Inicio {
 				GameCharacter jugatore2 = (GameCharacter) ois.readObject();
 
 				
-				System.out.print(jugatore1.power);
+				System.out.print(jugatore1.getPower());
 				
 				ois.close();
 				
